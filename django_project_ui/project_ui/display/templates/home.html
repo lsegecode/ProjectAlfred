@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EasyProduct</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+
+<body id="bg" style="background-image: url('{% static 'css/media/bg-main.png' %}');">
+    <div class="topbar">
+        <div class="columns">
+            <div class="column is-one-half">
+                <a href="home"><img class="logo-main"  src="{% static '/css/media/logo-main4.png' %}"></a>
+            </div>
+            <div class="navbar-end">
+                <div clas="navbar-item">
+                    <div class="buttons">
+                        <a class="navitem">
+                            Sign up
+                        </a>
+                        <a class="navitem">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <div class="main-sec">
+        <div class="subbody">
+            <h1 class="title is-1">Best offers</h2>
+            <h3 class="subtitle is-3">From your favorite e-commerce websites </h3>
+            <p class="desc is-size-5">As EasyProduct we compare the most popular delivery e-commerce webs and compare them
+                at the same time to give you the best options for your pocket and presserving quality.
+            </p>
+            
+        </div>
+        
+        <div class="bottom-body">
+            <div>
+                <h3 class="subtitle is-3 search-now">Search now!</h3>
+            </div>
+            <div class="search-box">
+                <div class="row">
+                    <div class="field has-addons">
+                        <form method="get" class="field has-addons">
+                        <p class="control is-expanded">
+                            <input id="search_input" name="search_product" class="input" type="text" placeholder="Search Products">
+                        </p>
+                        <p class="control">
+                            <button class="button is-primary" type="submit" onclick="this.form.action = '/easyProduct/search?search_product='+ document.getElementById('search_input').value;">
+                                <img class="" src="{% static '/css/media/magnifying-glass-white.png' %}">
+                            </button>
+                        </p>
+                    </form>
+                    </div>
+                </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

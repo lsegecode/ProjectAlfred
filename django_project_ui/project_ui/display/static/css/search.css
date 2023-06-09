@@ -1,0 +1,96 @@
+.navbar-menu{
+    background-image: linear-gradient(15deg,#339989 0%,  #7DE2D1 100%);
+}
+
+.navbar{
+    height: 70px;
+}
+
+.button.is-primary{
+    background-color: #339989;
+}
+
+.button.is-light{
+    background-color: #fffafb;
+}
+
+.navbar-item{
+    color: #fffafb;
+    font-weight: bold;
+}
+
+a.navbar-item:hover {
+    color:#339989;
+}
+
+.search-box{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+.search-box .control{
+    margin-top: auto;
+    margin-bottom:auto;
+}
+.search-box>.field.has-addons{
+    justify-content:baseline;
+}
+.search-box button.is-primary{
+    width:50px;
+}
+
+.search-box .button.is-primary>image{
+    padding-left:5px;
+    padding-right:5px;
+}
+.search-box input{
+    padding-right: 50px;
+    width:750px;
+}
+
+.menu-list a:hover{
+    color:#339989;
+}
+
+.column.is-one-third{
+    width:300px;
+}
+
+.column.filter{
+    width: 20%;
+    height: 100%;
+}
+
+.column.content{
+    width: 80%;
+}
+
+
+.medialeft{
+    height: 100%;
+    margin:10px;
+}
+
+.image.product-img{
+    max-width:80px;
+    max-height:80px;
+
+}
+
+.image.product-img:hover{
+    opacity: 50%;
+}
+
+.p-title a:hover{
+    color:#339989;
+}
+
+.max-min{
+    width: 75px;
+}
+
+#guion{
+    margin-top:auto;
+    margin-bottom: auto;
+}

@@ -1,0 +1,127 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="search-box">
+            <div class="row">
+                <div class="field has-addons">
+                    <a href="home"><img class="logo"  src="{% static '/css/media/easyproduct2.png' %}"></a>
+                    <form action = "" method="get" class="field has-addons">
+                    <p class="control is-expanded">
+                        <input class="input" type="text" placeholder="Search Product" name="search_product">
+                    </p>
+                    <p class="control">
+                        <button class="button is-primary" type="submit">
+                            <img class="" src="{% static '/css/media/magnifying-glass-white.png' %}">
+                        </button>
+                    </p>
+                </form>
+                </div>
+            </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="container is-fluid mb-5">
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <div class="row">
+                        <p class="menu-label">
+                            Your range
+                        </p>
+                        <div class="price-range">
+                            <input class="input max-min" placeholder="Min">
+                            <span ><i id="guion" >-</i></span>
+                            
+                            <input class="input max-min" placeholder="Max">
+                            <button class="button is-primary">Ok</button>
+                        </div>
+                       
+                        
+                        <p class="menu-label">
+                            Order By:
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Lower To Higher</a></li>
+                            <li><a>Higher To Lower</a></li>
+                            <li><a>Relevance</a></li>
+                        </ul>
+                        <p class="menu-label">
+                            Select products from:
+                        </p>
+                        <ul class="menu-list">
+                            <li><a>Aliexpress</a></li>
+                            <li><a>Amazon</a></li>
+                            <li><a>Ebay</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="ResultsContainer" class="columns is-multiline">
+                    {% for item in response %}
+                    <div class="column is-one-third">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image product-img">
+                                                <a href="{{item.link_url}}">
+                                                    <img src={{item.link_img}} alt={{item.product}}>
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="p-title">
+                                                <a href="{{item.link_url}}" class="title is-5">{{item.product}}</a>
+                                            </div>
+                                            <div>
+                                                <h3 class="subtitle is-6 company">{{item.origin}}</h3>
+                                            </div>
+                                            <div class="content">
+                                                <p class="location">
+                                                    ${{item.price}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                {% endfor %}   
+
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+#bg{
+    background-repeat: no-repeat ;
+    background-attachment: fixed;
+    background-size: 100% 120%;
+    background-position: top;
+    margin:0px;
+}
+
+.topbar{
+
+    padding-top: 20px;
+    height: 80px;
+    width: 100%;
+}
+
+.topbar .column.is-one-half a{
+
+    padding-left:100px;   
+}
+
+.buttons{
+    padding-top: 20px;
+    padding-right: 80px;
+    
+}
+.navitem{
+    color:#fffafb;
+    font-size: larger;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+.navitem:hover{
+    color:#339989;
+    background-color: #fffafb;
+    border-radius: 15px;
+}
+
+.navitem:active{
+    background-color:#e2dedf ;
+}
+
+.main-sec{
+    margin-top:95px;
+    width: 60%;
+}
+
+.subbody h1{
+    color:#7fffd4;
+    padding-left: 120px;
+    font-weight: bold;
+}
+
+.subbody h3{
+    color:#fffafb;
+    padding-left:120px;
+    font-weight: bold;
+}
+
+.search-now{
+    padding-top: 85px;
+    padding-bottom: 10px;
+    padding-left:120px;
+    color:#fffafb;
+    font-weight: bold;
+}
+.desc{
+    color:#fffafb;
+    padding-left:120px;
+}
+
+.search-box{
+    width: 700px;
+    margin-left: 120px;
+    margin-right: auto;
+}
+
+.search-box button.is-primary{
+    width:50px;
+}
+
+.search-box .button.is-primary>image{
+    padding-left:5px;
+    padding-right:5px;
+}
+.search-box input{
+    padding-right: 50px;
+    width:650px;
+}

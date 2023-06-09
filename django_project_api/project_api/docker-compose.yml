@@ -1,0 +1,24 @@
+version: "3.9"
+   
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=pistacho
+  web:
+    build: .
+    command: ./docker-entrypoint.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - NAME=postgres
+      - USER=postgres
+      - PASSWORD=pistacho
+    depends_on:
+      - db

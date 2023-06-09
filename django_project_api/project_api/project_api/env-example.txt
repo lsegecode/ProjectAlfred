@@ -1,0 +1,8 @@
+#create a file ".env" with these info inside
+
+ENGINE=django.db.backends.postgresql
+NAME=database name
+USER=user
+PASSWORD=password
+HOST=localhost
+PORT=5432

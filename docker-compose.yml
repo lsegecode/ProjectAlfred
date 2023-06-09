@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./django_project_api/project_api/data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=pistacho
+
+  project:
+    build: ./django_project_api/project_api
+    volumes:
+      - ./django_project_api/project_api:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - NAME=postgres
+      - USER=postgres
+      - PASSWORD=pistacho
+    depends_on:
+      - db
+
+  frontend:
+    build: ./django_project_ui/project_ui
+    volumes:
+      - ./django_project_ui/project_ui:/code
+    ports:
+      - "7000:7000"
+    depends_on:
+      - project
