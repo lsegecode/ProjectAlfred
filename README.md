@@ -1,5 +1,7 @@
 # README - Web Scraping Shopping Offers with Django
 
+We developed a Python and Django-based web scraping project that combines the power of APIs, web scraping, and user-friendly UI. This comprehensive tool allows users to search for a product of their choice and seamlessly fetches the most relevant results from popular e-commerce platforms like Amazon, Ebay, and AliExpress. The project is equipped with a robust logging system, efficient web scrapers, and data parsers to ensure accuracy and reliability. With its intuitive user interface, this project simplifies the product search process, making it a valuable addition to any web-savvy user's toolbox.
+
 This repository contains a Django project that utilizes web scraping to gather shopping offers from various websites and displays the best offers to the user.
 
 ## Project Structure
